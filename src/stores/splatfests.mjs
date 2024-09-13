@@ -65,7 +65,7 @@ function defineSplatfestRegionStore(region) {
 
       // Move the thumbnail image to "thumbnailImage" and pull in the high-res image for the stage
       if (fest.tricolorStage && !fest.tricolorStage.thumbnailImage) {
-        fest.tricolorStage.thumbnailImage = fest.tricolorStage.image.url;
+        fest.tricolorStage.thumbnailImage = fest.tricolorStage.image;
         fest.tricolorStage.image =
           vsStages.nodes.find(s => s.id === fest.tricolorStage.id)?.originalImage ||
           fest.tricolorStage.image;
